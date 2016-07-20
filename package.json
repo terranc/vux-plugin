@@ -1,18 +1,19 @@
 {
   "name": "vux-plugin",
-  "version": "3.1.0",
+  "version": "0.0.1",
   "description": "Suite of Vue components for building Flexbox layouts",
   "main": "dist/main.js",
+  "files": [
+    "dist/main.js"
+  ],
   "scripts": {
-    "dev": "node build/dev-server.js",
     "build": "node build/build.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "vux": "^0.1.3-rc1",
-    "babel-runtime": "^6.0.0"
+    "vux": "^0.1.3-rc1"
   },
   "devDependencies": {
     "babel-core": "^6.0.0",

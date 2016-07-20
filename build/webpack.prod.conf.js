@@ -27,7 +27,7 @@ var webpackConfig = merge(baseWebpackConfig, {
     })
   },
   plugins: [
-    new webpack.BannerPlugin('Lookfeel © hello@lookfeel.co'),
+    // new webpack.BannerPlugin('Lookfeel © hello@lookfeel.co'),
     // http://vuejs.github.io/vue-loader/workflow/production.html
     new webpack.DefinePlugin({
       '__DEV__': false,

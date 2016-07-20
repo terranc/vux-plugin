@@ -11,6 +11,8 @@ module.exports = {
   output: {
     path: config.build.assetsRoot,
     publicPath: config.build.assetsPublicPath,
+    libraryTarget: "umd",
+    library: 'VuePlugin',
     filename: 'main.js'
   },
   resolve: {
@@ -53,35 +55,8 @@ module.exports = {
         loader: 'babel',
         include: projectRoot,
         exclude: /node_modules/
-      },
-      {
-        test: /\.json$/,
-        loader: 'json'
-      },
-      {
-        test: /\.html$/,
-        loader: 'vue-html'
-      },
-      {
-        test: /\.(png|jpe?g|gif|svg)(\?.*)?$/,
-        loader: 'url',
-        query: {
-          limit: 10000,
-          name: utils.assetsPath('images/[name].[hash:7].[ext]')
-        }
-      },
-      {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url',
-        query: {
-          limit: 10000,
-          name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
-        }
       }
     ]
-  },
-  eslint: {
-    // formatter: require('eslint-friendly-formatter')
   },
   vue: {
     loaders: utils.cssLoaders()
